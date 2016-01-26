@@ -1,18 +1,20 @@
 name: "Guestbook"
 maintainer: "Flexiant Ltd."
 email: "contact@flexiant.com"
-description: "Installs/Configures Guestbook Example"
-version: "0.10.4"
+description: "Installs/Configures Guestbook Example via KDeploy"
+version: "0.0.1"
+source: "https://github.com/flexiant/kubeware-guestbook"
+issues: "https://github.com/flexiant/kubeware-guestbook/issues"
 
-replicationcontrollers:
-  redis-master: "redis-master-controller.yaml"
-  redis-slave: "redis-slave-controller.yaml"
-  frontend: "frontend-controller.yaml"
-
-services:
+svc:
   redis-master: "redis-master-service.yaml"
   redis-slave: "redis-slave-service.yaml"
   frontend: "frontend-service.yaml"
+
+rc:
+  redis-master: "redis-master-controller.yaml"
+  redis-slave: "redis-slave-controller.yaml"
+  frontend: "frontend-controller.yaml"
 
 attributes:
   svc:
