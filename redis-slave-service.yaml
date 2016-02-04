@@ -6,6 +6,7 @@ metadata:
   name: redis-slave
   labels:
     name: redis-slave
+    test: v2
 spec:
   ports:
     # the port that this service should serve on

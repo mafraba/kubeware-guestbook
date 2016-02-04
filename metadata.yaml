@@ -2,7 +2,7 @@ name: "Guestbook"
 maintainer: "Flexiant Ltd."
 email: "contact@flexiant.com"
 description: "Installs/Configures Guestbook Example via KDeploy"
-version: "0.0.1"
+version: "0.0.2"
 source: "https://github.com/flexiant/kubeware-guestbook"
 issues: "https://github.com/flexiant/kubeware-guestbook/issues"
 
@@ -72,7 +72,7 @@ attributes:
         required: true
     redis-slave:
       number:
-        default: 1
+        default: 2
         required: true
       name:
         default: "redis-slave"

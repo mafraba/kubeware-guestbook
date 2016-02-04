@@ -10,6 +10,7 @@ metadata:
   name: redis-slave
   labels:
     name: redis-slave
+    test: v2
 spec:
   replicas: {{ $number_of_replicas }}
   selector:
@@ -18,6 +19,7 @@ spec:
     metadata:
       labels:
         name: redis-slave
+        test: v2
     spec:
       containers:
       - name: {{ $container_name }}
