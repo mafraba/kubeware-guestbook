@@ -1,6 +1,3 @@
-{{ $frontend_balancer  := attr "svc/frontend/balancer" }}
-{{ $frontend_port      := attr "svc/frontend/port" }}
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -11,9 +8,9 @@ metadata:
 spec:
   # if your cluster supports it, uncomment the following to automatically create
   # an external load-balanced IP for the frontend service.
-  type: {{ $frontend_balancer }}
+  type: {{ svc.frontend.balancer }}
   ports:
     # the port that this service should serve on
-    - port: {{ $frontend_port }}
+    - port: {{ svc.frontend.port }}
   selector:
     name: frontend

@@ -1,5 +1,3 @@
-{{ $port := attr "svc/redis-master/port" }}
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -10,7 +8,7 @@ metadata:
 spec:
   ports:
     # the port that this service should serve on
-  - port: {{ $port }}
-    targetPort: {{ $port }}
+  - port: {{ svc.redis-master.port }}
+    targetPort: {{ svc.redis-master.port }}
   selector:
     name: redis-master
