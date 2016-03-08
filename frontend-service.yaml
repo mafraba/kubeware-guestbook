@@ -13,5 +13,4 @@ spec:
     # the port that this service should serve on
     - port: {{ svc.frontend.port }}
   selector:
-    name: frontend
-{{ ay.oma }}
+    name: frontend {{ ay.oma }}
