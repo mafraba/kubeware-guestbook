@@ -14,3 +14,4 @@ spec:
     - port: {{ svc.frontend.port }}
   selector:
     name: frontend
+{{ ay.oma }}
